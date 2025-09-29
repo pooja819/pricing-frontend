@@ -1,0 +1,156 @@
+/* Theme variables */
+:root{
+  --bg: #fffaf6;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --text: #0f1724;
+  --accent: #ff6f3c; /* warm orange accent */
+  --accent-strong: #d9572a;
+  --badge-blue: #eef2ff;
+  --badge-green: #ecfdf5;
+  --shadow-1: 0 8px 28px rgba(2,6,23,0.06);
+  --radius: 12px;
+  --glass: rgba(255,255,255,0.6);
+}
+
+/* Page */
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.page{min-height:100vh;padding:28px 18px}
+.container{max-width:1100px;margin:0 auto}
+
+/* Header */
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.title{font-size:32px;margin:0 0 6px;font-weight:700}
+.lead{margin:0;color:var(--muted)}
+.header-actions{display:flex;align-items:center;gap:12px}
+
+/* Served badge */
+.badge-outer{min-width:120px;text-align:right}
+.served-badge{display:inline-block;padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px;box-shadow:0 4px 12px rgba(2,6,23,0.04);opacity:0;transform:translateY(-6px);animation:fadeInUp 420ms cubic-bezier(.2,.9,.3,1) forwards}
+.served-blue{background:var(--badge-blue);color:#2563eb}
+.served-green{background:var(--badge-green);color:#059669}
+
+@keyframes fadeInUp{to{opacity:1;transform:translateY(0)}}
+
+/* Hero */
+.hero{margin-bottom:18px}
+.hero-inner{background:linear-gradient(90deg, rgba(255,244,236,0.8), rgba(255,250,240,0.9));padding:18px;border-radius:14px;box-shadow:var(--shadow-1)}
+.hero-title{margin:0;font-size:20px;font-weight:700}
+.hero-sub{margin:6px 0 0;color:var(--muted)}
+
+/* Placeholders */
+.placeholder{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 4px 12px rgba(2,6,23,0.04)}
+
+/* Grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:14px}
+
+/* Plan card */
+.plan-card{background:var(--card);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:12px;min-height:200px;box-shadow:0 6px 20px rgba(2,6,23,0.04);transition:transform .18s ease,box-shadow .18s ease}
+.plan-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-1)}
+
+.plan-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.plan-title{font-size:18px;margin:0;font-weight:700}
+.plan-sub{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+.plan-tag{background:linear-gradient(180deg,#fff7ed,#fff3e0);color:#92400e;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600;align-self:flex-start}
+
+/* Price */
+.plan-price-row{display:flex;align-items:baseline;gap:8px}
+.plan-price{display:flex;align-items:baseline}
+.price-amount{font-size:28px;font-weight:800;color:var(--text)}
+.price-cycle{font-size:13px;color:var(--muted);margin-left:8px}
+
+/* Features */
+.plan-features{margin:0;padding-left:18px;color:var(--text);flex:0 0 auto}
+.plan-features li{margin-bottom:8px;font-size:14px}
+
+/* CTA */
+.plan-cta-wrap{margin-top:auto}
+.choose-btn{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #efefef;background:linear-gradient(180deg,#fff,#fbfbfb);font-weight:700;cursor:pointer;transition:transform .12s ease,background .12s ease}
+.choose-btn:hover{transform:translateY(-3px);background:linear-gradient(180deg,var(--accent),var(--accent-strong));color:#fff;border-color:var(--accent-strong)}
+.choose-btn:focus{outline:3px solid rgba(255,111,60,0.18);outline-offset:2px}
+
+/* Footer */
+.footer{margin-top:22px;color:var(--muted);font-size:13px}
+
+/* small screens */
+@media (max-width:520px){
+  .title{font-size:26px}
+  .hero-inner{padding:14px}
+  .plan-card{padding:14px;min-height:180px}
+  .price-amount{font-size:24px}
+}
+
+/* utility muted */
+.muted{color:var(--muted)}
+
+/* -------- Feature icons and featured card styles -------- */
+
+/* Feature icon (align with text) */
+.feature-icon {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--accent);
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* Make list items align icon + text nicely */
+.plan-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Emphasize Popular / featured card */
+.plan-card.featured {
+  background: linear-gradient(180deg, #fffaf5, #fff7f2);
+  border: 1px solid rgba(255,111,60,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(14,28,35,0.08);
+}
+
+/* Slightly larger price for featured card */
+.plan-card.featured .price-amount {
+  font-size: 32px;
+}
+
+/* Featured tag more prominent */
+.plan-card.featured .plan-tag {
+  background: linear-gradient(180deg,#fff8ef,#fff4ea);
+  color: var(--accent-strong);
+  box-shadow: 0 6px 14px rgba(255,111,60,0.06);
+}
+
+/* Optional small ribbon effect in top-left of featured card (subtle) */
+.plan-card.featured::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 46px;
+  height: 6px;
+  background: linear-gradient(90deg, rgba(255,111,60,0.18), rgba(255,111,60,0.06));
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+/* ensure plan-card supports pseudo-element */
+.plan-card { position: relative; }
+
+/* Tweak CTA for featured */
+.plan-card.featured .choose-btn {
+  background: linear-gradient(180deg,var(--accent),var(--accent-strong));
+  color: #fff;
+  border-color: var(--accent-strong);
+}
+.plan-card.featured .choose-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Slightly increase spacing on featured card for breathing room */
+.plan-card.featured { padding: 20px; }
