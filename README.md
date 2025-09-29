@@ -29,8 +29,6 @@ npm install
 
 2. Run the Mock Backend
 
-npm start
-# or
 node mock-server.cjs
 
 Backend runs at:
@@ -64,13 +62,20 @@ Send X-Version: blue or X-Version: green header to override manually (for testin
 
 ---
 
-📱 Screenshots
+📸 Screenshots
 
-Desktop view:
-(Insert screenshot here)
+Desktop View
 
-Mobile view (via Chrome DevTools or phone):
-(Insert screenshot here)
+
+
+(This screenshot shows the Green version with 3 plans: Starter, Growth, and Enterprise.)
+
+Mobile View
+
+No direct mobile screenshot is provided.
+
+The UI is fully responsive and can be previewed in Chrome DevTools mobile emulator (Ctrl+Shift+M).
+
 
 
 ---
@@ -81,11 +86,14 @@ pricing-frontend/
 ├── src/ # React frontend code
 │ ├── App.jsx # Main app with pricing fetch & UI
 │ ├── App.css # Styles
+│ ├── index.css # Global styles
 │ ├── main.jsx # React entry point
 ├── mock-server.cjs # Mock backend (blue/green routing)
-├── package.json
-├── README.md
-├── .gitignore
+├── package.json # Project dependencies & scripts
+├── README.md # Documentation
+├── .gitignore # Ignore node_modules, dist, env, etc.
+├── vite.config.js # Vite config
+├── index.html # Base HTML
 
 
 ---
@@ -108,7 +116,11 @@ This project is for demonstrating blue-green deployment routing in a frontend + 
 
 No database is used; pricing data is loaded from JSON objects.
 
-For sticky routing to work, frontend uses fetch(..., { credentials: 'include' }).
+For sticky routing to work, frontend uses:
+
+fetch('http://localhost:8080/pricing', { credentials: 'include' })
+
+CORS middleware allows any frontend running on http://localhost:51xx.
 
 
 
@@ -116,4 +128,4 @@ For sticky routing to work, frontend uses fetch(..., { credentials: 'include' })
 
 👩‍💻 Author
 
-Pooja Kalukhe - Assignment project on Blue/Green Pricing API with Configurable Routing and Frontend
+Pooja — Assignment project on Blue/Green Pricing API with Configurable Routing and Frontend.
