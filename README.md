@@ -137,7 +137,16 @@ fetch('http://localhost:8080/pricing', { credentials: 'include' })
 
 CORS middleware allows any frontend running on http://localhost:51xx.
 
+---
 
+## ✅ Submission Checklist
+- [x] Responsive frontend pricing page  
+- [x] Fetches data from /pricing (no client-side version toggle)  
+- [x] Shows served version (blue/green)  
+- [x] Sticky sessions with cookies supported  
+- [x] Clean loading & error states  
+- [x] Modular React + Vite frontend code  
+- [x] README with setup instructions & screenshot
 
 ---
 
