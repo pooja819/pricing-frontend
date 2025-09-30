@@ -1,28 +1,43 @@
-# 📦 Pricing Frontend — Blue/Green Deployment Demo
+---
 
-This project demonstrates a **frontend pricing page** connected to a mock backend that simulates **blue-green deployment with sticky routing**.  
+📦 Pricing Frontend — Blue/Green Deployment Demo
 
-The frontend is built with **React + Vite** and the backend uses a simple **Express mock server**.
+This project demonstrates a frontend pricing page connected to a mock backend that simulates blue-green deployment with sticky routing.
+
+The frontend is built with React + Vite and the backend uses a simple Express mock server.
+
 
 ---
 
-## ✨ Features
-- **Responsive Pricing Page** — displays pricing plans in a modern card layout.  
-- **Dynamic Data** — fetches `/pricing` API and renders **exactly** what backend returns.  
-- **Version Indicator** — badge shows which version (`blue` or `green`) was served.  
-- **Sticky Sessions** — uses cookies to keep users on the same version across refreshes.  
-- **Routing Rules Supported**:  
-  - Header-based (`X-Version: blue|green`)  
-  - Cookie-based sticky routing  
-  - Random split (50/50 by default)  
-- **Logging** — backend logs metadata and decision for each request.  
+✨ Features
+
+Responsive Pricing Page — displays pricing plans in a modern card layout.
+
+Dynamic Data — fetches /pricing API and renders exactly what backend returns.
+
+Version Indicator — badge shows which version (blue or green) was served.
+
+Sticky Sessions — uses cookies to keep users on the same version across refreshes.
+
+Routing Rules Supported:
+
+Header-based (X-Version: blue|green)
+
+Cookie-based sticky routing
+
+Random split (50/50 by default)
+
+
+Logging — backend logs metadata and decision for each request.
+
+
 
 ---
 
-## 🚀 Getting Started
+🚀 Getting Started
 
-### 1. Clone & Install
-```bash
+1. Clone & Install
+
 git clone <your-repo-url>
 cd pricing-frontend
 npm install
@@ -65,11 +80,10 @@ Send X-Version: blue or X-Version: green header to override manually (for testin
 📸 Screenshots
 
 Desktop View
+
 <p align="center">
   <img src="screenshots/desktop.png" alt="Desktop Screenshot" width="900" />
-</p>
-
-(This screenshot shows the Green version with 3 plans: Starter, Growth, and Enterprise.)
+</p>(This screenshot shows the Green version with 3 plans: Starter, Growth, and Enterprise.)
 
 Mobile View
 
@@ -84,17 +98,17 @@ The UI is fully responsive and can be previewed in Chrome DevTools mobile emulat
 📂 Project Structure
 
 pricing-frontend/
-├── src/ # React frontend code
-│ ├── App.jsx # Main app with pricing fetch & UI
-│ ├── App.css # Styles
-│ ├── index.css # Global styles
-│ ├── main.jsx # React entry point
-├── mock-server.cjs # Mock backend (blue/green routing)
-├── package.json # Project dependencies & scripts
-├── README.md # Documentation
-├── .gitignore # Ignore node_modules, dist, env, etc.
-├── vite.config.js # Vite config
-├── index.html # Base HTML
+├── src/                 # React frontend code
+│   ├── App.jsx          # Main app with pricing fetch & UI
+│   ├── App.css          # Styles
+│   ├── index.css        # Global styles
+│   ├── main.jsx         # React entry point
+├── mock-server.cjs      # Mock backend (blue/green routing)
+├── package.json         # Project dependencies & scripts
+├── README.md            # Documentation
+├── .gitignore           # Ignore node_modules, dist, env, etc.
+├── vite.config.js       # Vite config
+├── index.html           # Base HTML
 
 
 ---
