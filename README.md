@@ -65,6 +65,7 @@ Send X-Version: blue or X-Version: green header to override manually (for testin
 📸 Screenshots
 
 Desktop View
+<img width="1920" height="864" alt="image" src="https://github.com/user-attachments/assets/35d427c2-5a37-4c56-b878-47d494417a50" />
 
 
 
