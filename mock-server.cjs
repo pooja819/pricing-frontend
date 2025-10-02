@@ -67,7 +67,7 @@ const blue = {
 };
 
 // /pricing endpoint with detailed logging of decision
-app.get('/pricing', (req, res) => {
+app.get('/', (req, res) => {
   const header = req.get('X-Version');
   let served = null;
 
