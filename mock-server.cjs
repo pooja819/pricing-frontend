@@ -7,7 +7,7 @@ const app = express();
 // CORS: allow any local Vite origin on localhost:51xx (safe for local dev)
 app.use((req, res, next) => {
   const origin = req.get('Origin');
-  const allowedFrontend = 'https://pricing-frontend-9uuh.onrender.com/';
+  const allowedFrontend = 'https://pricing-frontend-9uuh.onrender.com';
   if (origin && origin === allowedFrontend) {
     res.setHeader('Access-Control-Allow-Origin', origin);
   }
@@ -57,7 +57,7 @@ const blue = {
       highlighted: false,
     },
     {
-      id: 'g3',
+      id: 'b3',
       name: 'Enterprise',
       price: '49.99',
       currency: 'USD',
@@ -67,8 +67,17 @@ const blue = {
   ],
 };
 
+const green = {
+  version: 'green',
+  plans: [
+    { id: 'g1', name: 'Starter', price: '8.99', currency: 'USD', billingCycle: 'mo', features: ['Starter Feature X', 'Starter Feature Y'] },
+    { id: 'g2', name: 'Growth', price: '18.99', currency: 'USD', billingCycle: 'mo', features: ['Everything in Starter', 'Growth Feature Z', 'Priority Support'], tag: 'Recommended' },
+    { id: 'g3', name: 'Enterprise', price: '49.99', currency: 'USD', billingCycle: 'mo', features: ['All Growth features', 'Dedicated Manager', 'Custom Solutions'] },
+  ],
+};
+
 // /pricing endpoint with detailed logging of decision
-app.get('/', (req, res) => {
+app.get('/pricing', (req, res) => {
   const header = req.get('X-Version');
   let served = null;
 
