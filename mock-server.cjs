@@ -7,12 +7,13 @@ const app = express();
 // CORS: allow any local Vite origin on localhost:51xx (safe for local dev)
 app.use((req, res, next) => {
   const origin = req.get('Origin');
-  if (origin && origin.startsWith('http://localhost:51')) {
+  const allowedFrontend = 'https://pricing-frontend-9uuh.onrender.com/';
+  if (origin && origin === allowedFrontend) {
     res.setHeader('Access-Control-Allow-Origin', origin);
   }
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Version');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,POST');
   if (req.method === 'OPTIONS') return res.sendStatus(200);
   next();
 });
