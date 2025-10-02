@@ -70,7 +70,7 @@ export default function App() {
     setLoading(true);
     setError(null);
 
-    fetch("https://pricing-backend-xhsp.onrender.com/pricing", {
+    fetch("https://pricing-backend-xhsp.onrender.com", {
       method: "GET",
       credentials: "include",
       headers: { "Accept": "application/json" },
